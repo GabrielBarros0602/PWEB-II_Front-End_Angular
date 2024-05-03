@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit{
 
   nomeProduto : string = "Curso de Angular";
   anuncio : string = `O ${this.nomeProduto} está em promoção`;
-  idProduto : number = 3;
+  idProduto : number = 1;
   precoProduto : number = 2.59;
   promocao : boolean = true;
   foto : string = 'assets/img/crud.png'
@@ -19,11 +19,6 @@ export class HomeComponent implements OnInit{
 
 
   constructor() {
-    console.log("Nome do produto: ", this.nomeProduto)
-    console.log("Anuncio: ", this.anuncio)
-    console.log("Id: ", this.idProduto)
-    console.log("Preço: ", this.precoProduto)
-    console.log("Promoção: ", this.promocao)
 
    }
 

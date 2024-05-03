@@ -10,6 +10,8 @@
             type="text"
             class="form-control"
             placeholder="Informe o nome do Produto a ser cadastrado"
+            name="nomeProduto"
+            [(ngModel)]="nome"
           />
         </div>
       </div>
@@ -19,30 +21,33 @@
         <div class="form-group">
           <label for="validade">Validade do Produto: </label>
           <input
-            type="date"
-            class="form-control"          />
+          type="date"
+          class="form-control"
+          name="validade"
+          [(ngModel)]="validade"
+          />
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label for="precoProduto">Preço do Produto: </label>
           <input
-            type="number"
-            class="form-control"
-            placeholder="0.00"
-            />
+          type="number"
+          class="form-control"
+          placeholder="0.00"
+          name="preco"
+          [(ngModel)]="preco"
+          />
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <button class="btn btn-default" routerLink="/produtos">
-          Voltar
-        </button>
-        <button class="btn btn-success float-right">
-          Salvar
-        </button>
+        <button class="btn btn-default" routerLink="/produtos">Voltar</button>
+        <button class="btn btn-success float-right">Salvar</button>
       </div>
     </div>
   </form>
+</div>
+<div class="card mt-3">
 </div>

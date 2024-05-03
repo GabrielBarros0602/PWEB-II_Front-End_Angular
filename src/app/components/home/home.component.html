@@ -1,26 +1,40 @@
 <app-header></app-header>
 
 <h1>Seja bem-vindo ao curso de Angular!</h1>
-<h4 class="text-danger">{{anuncio}}</h4>
+<h4 class="text-danger">{{ anuncio }}</h4>
 
-<div class="card" style="width: 18rem;">
-  <img [src]="foto" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">
-      {{nomeProduto | uppercase}}
-      <span *ngIf="promocao;else elseBlock" class="badge badge-success">Promoção</span>
-      <ng-template #elseBlock>
-        <span class="badge badge-primary">Aproveite</span>
-      </ng-template>
-    </h5>
-    <p class="card-text">Identificação: {{idProduto | number: '2.0-0'}} <br>
-    Validade: {{dataValidade | date : 'shortDate'}}
-    </p>
-    <a href="#" class="btn btn-primary float-right">{{precoProduto | currency:'BRL'}}</a>
-
+<div class="row">
+  <div class="col">
+    <app-card-produto
+  [foto]="foto"
+  [nomeProduto]="nomeProduto"
+  [promocao]="promocao"
+  [idProduto]="idProduto"
+  [dataValidade]='dataValidade'
+  [precoProduto]='precoProduto'
+    ></app-card-produto>
+  </div>
+  <div class="col">
+    <app-card-produto
+  foto="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_8836234a09e6574906f74289d77dd6c0/ionic.png"
+  nomeProduto="Curso de Ionic básico"
+  [promocao]="true"
+  [idProduto]="02"
+  dataValidade='2021-12-31'
+  [precoProduto]='50.0'
+    ></app-card-produto>
+  </div>
+  <div class="col">
+    <app-card-produto
+  foto="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_8836234a09e6574906f74289d77dd6c0/ionic.png"
+  nomeProduto="Curso de Ionic avançado"
+  [promocao]="false"
+  [idProduto]="03"
+  dataValidade='2021-12-31'
+  [precoProduto]='50.0'
+    ></app-card-produto>
   </div>
 </div>
-
 
 
 
